@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Toe</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="main">
+    
+    <div id="tttHeading" class="">
+    <h1 class="text-center">Tic-Tac-Toe</h1>
+    <i class="fa fa-cog fa-3x" id="settingsIcon" aria-hidden="true"></i>    
+    </div><!-- //#tttHeading -->
+    
+    <div id="board">
+          <div id="0" class="boardTile text-center"></div>
+          <div id="1" class="boardTile text-center"></div>
+          <div id="2" class="boardTile text-center"></div>
+          <div id="3" class="boardTile text-center"></div>
+          <div id="4" class="boardTile text-center"></div>
+          <div id="5" class="boardTile text-center"></div>
+          <div id="6" class="boardTile text-center"></div>
+          <div id="7" class="boardTile text-center"></div>
+          <div id="8" class="boardTile text-center"></div>
+    </div> <!-- /#board -->
+    
+    <div id="" class="text-center">
+    <button id="reset" class="btn btn-restart btn-lg "><i id="restartIcon" class="fa fa-refresh fa-2x" aria-hidden="true"></i></button>
+    </div>
+    
+    <div id="scoreBoard">
+      <div class="row">
+        <div class="col-xs-4 text-center">
+          <i id="playerOneIcon" class="fa fa-user fa-3x"></i><span id="oneIcon"></span> <span id="playerOneScore"></span>
+        </div>
+        <div class="col-xs-4 text-center">
+          <i id="playerTwoIcon" class="fa fa-laptop fa-3x"></i><span id="twoIcon"></span> <span id="playerTwoScore"></span>
+        </div>
+        <div class="col-xs-4 text-center">
+          <i class="fa fa-times-circle fa-3x"></i> <span id="drawScore"></span>
+        </div>      
+      </div> <!-- /row -->
+    </div> <!-- /#scoreBoard -->
+    
+  </div> <!-- /main -->  
+</div> <!-- /container -->
+
+<div class="modal fade" id="modalSettings">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="text-center">Initial Settings</h3>
+          </div><!-- //.modal-header -->
+          <div class="modal-body">
+            <div id="playerSettings">
+              <div id="playerSettingsLabel">Number of Players </div>
+            <div id="playerSettingsButtons" class="btn-group" data-toggle="buttons">
+              <label class="btn btn-settings active">
+                <input type="radio" name="players" id="playersOption1" value="1" checked>ONE
+              </label>
+              <label class="btn btn-settings">
+                <input type="radio" name="players" id="playersOption2" value="2">TWO
+              </label>
+              </div> <!-- //#playerSettingsButtons -->
+            </div><!-- //#playerSettings -->
+            
+            <div id="difficultySettings">
+              <div id="difficultySettingsLabel">AI Difficulty</div>
+              <div id="difficultySettingsButtons" class="btn-group" data-toggle="buttons">
+              <label class="btn btn-settings">
+                <input type="radio" name="difficulty" id="difficultyOption1" value="novice" class="">Beginner
+              </label>
+              <label class="btn btn-settings">
+                <input type="radio" name="difficulty" id="difficultyOption2" value="intermediate" class="">Amateur
+              </label>
+                <label class="btn btn-settings active">
+                <input type="radio" name="difficulty" id="difficultyOption3" value="expert" class="" checked>Expert
+              </label>
+              </div><!-- //#difficultySettingsButtons -->
+            </div> <!-- //#difficultySettings -->            
+            
+            <div id="playerMark">
+              <div id="playerMarkLabel">Choose your mark </div>
+            <div id="playerMarkButtons" class="btn-group" data-toggle="buttons">
+              <label class="btn btn-settings active">
+                <input type="radio" name="mark" id="markOption1" value="x" checked>X
+              </label>
+              <label class="btn btn-settings">
+                <input type="radio" name="mark" id="markOption2" value="o">O
+              </label>
+              </div> <!-- //#playerMarkButtons -->
+            </div><!-- //#playerMark -->
+            <hr>
+            <div id="instructions">
+              <div class="row">
+                <div class="col-xs-1">
+                  <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
+                </div>
+                <div class="col-xs-11">
+                  <div>
+                  X plays first<br>
+                    Click <i class="fa fa-cog"aria-hidden="true"></i><strong>(Settings) > Play</strong> to reset scores
+                  </div>
+              </div>
+            </div> <!-- /row -->
+            </div> <!-- /#instructions -->
+          </div><!-- //.modal-body -->
+
+          <div class="modal-footer">
+            <button id="play" class="btn btn-lg">PLAY!</button>            
+          </div><!-- //.modal-footer -->
+        </div><!-- //.modal-content -->
+      </div><!-- //.modal-dialog -->    
+    </div><!-- //.modal -->
+
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+    </body>
+</html>

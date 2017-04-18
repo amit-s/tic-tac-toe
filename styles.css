@@ -1,0 +1,167 @@
+/*.bx{
+  border: 1px solid;
+}*/
+
+#tttHeading{
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#settingsIcon{
+  position: absolute;
+  top: 0px;
+}
+
+#settingsIcon:hover{
+  cursor: pointer;
+}
+
+.winTile{
+  background: rgba(0,128,128,0.4);  
+}
+
+.loseTile{
+  background: rgba(255,0,0,0.3);
+}
+
+.drawTile{
+  background: rgba(0,0,0,0.2);  
+}
+
+.btn-settings{
+  background: rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+  color: black;
+}
+
+.btn-settings.active{
+  background: rgba(0,0,0,0.4);
+}
+
+.btn-restart, .btn-restart:focus, .btn-restart:active:focus{
+  outline: none;  
+}
+
+
+
+@media only screen and (min-width : 360px){
+  .main{
+  margin: auto;
+  width: 350px;  
+  }
+  #board{
+  position: relative;
+  margin: auto;
+  width: 345px;
+  height: 345px;
+  }
+
+  .boardTile{
+    position: absolute;
+    height: 115px;
+    width: 115px;
+    font-size: 6em;
+  }
+
+  [id="1"], [id="4"], [id="7"]{
+    left: 115px;
+    border-left: 5px solid;
+    border-right: 5px solid;
+  }
+
+  [id="2"], [id="5"], [id="8"]{
+    left: 230px;
+  }
+
+  [id="3"], [id="4"], [id="5"]{
+    top: 115px;
+    border-top: 5px solid;
+  }
+
+  [id="6"], [id="7"], [id="8"]{
+    top: 230px;
+    border-top: 5px solid;
+  }
+
+  #reset{
+    margin-top: 10px;
+    width: 115px;
+    background: none;
+  }
+  
+  #playerSettings, #difficultySettings, #playerMark{
+  font-size: 1.5em;
+}
+
+#instructions{
+  font-size: 1.1em;
+}
+
+#playerOneScore, #playerTwoScore, #drawScore{
+  font-size: 3em;
+}
+
+#oneIcon, #twoIcon{
+  font-size: 3em;
+}
+}
+  
+  @media only screen and (max-width : 360px){
+    
+    #board{
+  position: relative;
+  margin: auto;
+  width: 315px;
+  height: 315px;
+}
+
+.boardTile{
+  position: absolute;
+  height: 105px;
+  width: 105px;
+  font-size: 5em;
+}
+
+[id="1"], [id="4"], [id="7"]{
+  left: 105px;
+  border-left: 3px solid;
+  border-right: 3px solid;
+}
+
+[id="2"], [id="5"], [id="8"]{
+  left: 210px;
+}
+
+[id="3"], [id="4"], [id="5"]{
+  top: 105px;
+  border-top: 3px solid;
+}
+
+[id="6"], [id="7"], [id="8"]{
+  top: 210px;
+  border-top: 3px solid;
+}
+
+#reset{
+  margin-top: 10px;
+  width: 105px;
+  background: none;
+}
+
+#playerSettings, #difficultySettings, #playerMark{
+  
+}
+
+#playerOneScore, #playerTwoScore, #drawScore{
+  font-size: 1.5em;
+}
+
+#oneIcon, #twoIcon{
+  font-size: 1.5em;
+}
+
+#instructions{
+  font-size: 1em;
+}
+ 
+}
